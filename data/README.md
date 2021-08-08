@@ -49,3 +49,24 @@ first. Actually, let's try even smaller images (200x271).
 Examples:
 
 ![](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.1.200x271.png) ![](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.2.200x271.png)
+
+## Convenient preprocessing
+
+```
+$ tree -d
+.
+├── data
+│   ├── class_first_page
+│   └── class_subsequent_page
+└── static
+
+4 directories
+```
+
+* [tf.keras.preprocessing.image_dataset_from_directory](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image_dataset_from_directory)
+* [image_dataset_from_directory](https://github.com/keras-team/keras/blob/06ba37b8662dea768b3bc8201942f1eb877708e8/keras/preprocessing/image_dataset.py#L33)
+* [index_directory](https://github.com/keras-team/keras/blob/06ba37b8662dea768b3bc8201942f1eb877708e8/keras/preprocessing/dataset_utils.py#L26)
+
+All subdirectories are considered; may override with `class_names` parameter.
+
+* [class_names](https://github.com/keras-team/keras/blob/06ba37b8662dea768b3bc8201942f1eb877708e8/keras/preprocessing/dataset_utils.py#L45-L48)
