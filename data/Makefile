@@ -10,7 +10,7 @@ PAGE1_600x813 = $(patsubst %.1.png, %.1.600x813.png, $(PAGE1))
 PAGE2_600x813 = $(patsubst %.2.png, %.2.600x813.png, $(PAGE2))
 
 .PHONY: all
-all: $(PAGE1_600x) $(PAGE2_600x)
+all: $(PAGE1_600x813) $(PAGE2_600x813)
 
 .PHONY: clean
 clean:
