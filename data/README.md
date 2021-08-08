@@ -35,3 +35,13 @@ release_2n2fdhgekfhoroa2ojzlrctxsm.2.png
 release_2n2fdhgekfhoroa2ojzlrctxsm.pdf
 release_3aumrk2zu5amdcoksqtdcg5bhu.1.png
 ```
+
+What is the average image aspect ratio?
+
+```
+$ find . -name "*png" | python imratio.py
+1.3560107200436284
+```
+
+We want to shrink the images a bit, trying to keep the ratio.
+

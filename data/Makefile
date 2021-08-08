@@ -6,14 +6,18 @@ SHELL := /bin/bash
 PDF := $(wildcard *.pdf)
 PAGE1 = $(patsubst %.pdf, %.1.png, $(PDF))
 PAGE2 = $(patsubst %.pdf, %.2.png, $(PDF))
+PAGE1_600x813 = $(patsubst %.1.png, %.1.600x813.png, $(PAGE1))
+PAGE2_600x813 = $(patsubst %.2.png, %.2.600x813.png, $(PAGE2))
 
 .PHONY: all
-all: $(PAGE1) $(PAGE2)
+all: $(PAGE1_600x) $(PAGE2_600x)
 
 .PHONY: clean
 clean:
 	rm -f *.1.png
 	rm -f *.2.png
+	rm -f *.1.600x813.png
+	rm -f *.2.600x813.png
 	rm -f *.partial_download
 
 %.1.png: %.pdf
@@ -21,3 +25,10 @@ clean:
 
 %.2.png: %.pdf
 	pdftoppm -png -f 2 -l 2 $^ > $@
+
+%.1.600x813.png: %.1.png
+	convert -resize 600x813 $^ $@
+
+%.2.600x813.png: %.2.png
+	convert -resize 600x813 $^ $@
+
