@@ -27,8 +27,8 @@ clean:
 	pdftoppm -png -f 2 -l 2 $^ > $@
 
 %.1.600x813.png: %.1.png
-	convert -resize 600x813 $^ $@
+	convert -resize 600x813\! $^ $@
 
 %.2.600x813.png: %.2.png
-	convert -resize 600x813 $^ $@
+	convert -resize 600x813\! $^ $@
 
