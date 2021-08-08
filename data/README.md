@@ -44,7 +44,7 @@ $ find . -name "*png" | python imratio.py
 ```
 
 We want to shrink the images a bit, trying to keep the ratio. Let's try 600x813
-first.
+first. Actually, let's try even smaller images (200x271).
 
 Examples:
 
