@@ -43,5 +43,9 @@ $ find . -name "*png" | python imratio.py
 1.3560107200436284
 ```
 
-We want to shrink the images a bit, trying to keep the ratio.
+We want to shrink the images a bit, trying to keep the ratio. Let's try 600x813
+first.
 
+Examples:
+
+![](release_yp7c4ly4dnctthlrrplgvrbwu4.1.600x813.png) [](release_yp7c4ly4dnctthlrrplgvrbwu4.2.600x813.png)

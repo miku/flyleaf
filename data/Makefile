@@ -12,14 +12,6 @@ PAGE2_600x813 = $(patsubst %.2.png, %.2.600x813.png, $(PAGE2))
 .PHONY: all
 all: $(PAGE1_600x813) $(PAGE2_600x813)
 
-.PHONY: clean
-clean:
-	rm -f *.1.png
-	rm -f *.2.png
-	rm -f *.1.600x813.png
-	rm -f *.2.600x813.png
-	rm -f *.partial_download
-
 %.1.png: %.pdf
 	pdftoppm -png -f 1 -l 1 $^ > $@
 
@@ -32,3 +24,13 @@ clean:
 %.2.600x813.png: %.2.png
 	convert -resize 600x813\! $^ $@
 
+.SECONDARY:
+	# https://stackoverflow.com/a/67780778/89391
+
+.PHONY: clean
+clean:
+	rm -f *.1.png
+	rm -f *.2.png
+	rm -f *.1.600x813.png
+	rm -f *.2.600x813.png
+	rm -f *.partial_download
