@@ -48,4 +48,4 @@ first.
 
 Examples:
 
-![](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.1.600x813.png) [](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.2.600x813.png)
+![](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.1.600x813.png) ![](../static/release_yp7c4ly4dnctthlrrplgvrbwu4.2.600x813.png)
