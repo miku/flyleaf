@@ -22,3 +22,20 @@ Training set generation:
 
 * take a set of paper, for which we mostly know the start at page one; extract page 1 and page 2
 * convert pdf to pngs
+
+Notes on [data](data).
+
+## Exploration
+
+Off-the-shelf:
+
+* [https://keras.io/examples/vision/image_classification_from_scratch/](https://keras.io/examples/vision/image_classification_from_scratch/)
+
+```
+Found 204 files belonging to 2 classes.
+Using 164 files for training.
+Found 204 files belonging to 2 classes.
+Using 40 files for validation.
+```
+
+Validation accuracy as low as 0.5, max 0.875. With augmentation, which we do not really need. Try once again without.
