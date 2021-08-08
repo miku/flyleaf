@@ -8,11 +8,11 @@ PAGE1 = $(patsubst %.pdf, %.1.png, $(PDF))
 PAGE2 = $(patsubst %.pdf, %.2.png, $(PDF))
 PAGE1_600x813 = $(patsubst %.1.png, %.1.600x813.png, $(PAGE1))
 PAGE2_600x813 = $(patsubst %.2.png, %.2.600x813.png, $(PAGE2))
-PAGE1_200x271 = $(patsubst %.1.png, %.1.200x217.png, $(PAGE1))
-PAGE2_200x271 = $(patsubst %.2.png, %.2.200x217.png, $(PAGE2))
+PAGE1_200x271 = $(patsubst %.1.png, %.1.200x271.png, $(PAGE1))
+PAGE2_200x271 = $(patsubst %.2.png, %.2.200x271.png, $(PAGE2))
 
 .PHONY: all
-all: $(PAGE1_200x217) $(PAGE2_200x217)
+all: $(PAGE1_200x271) $(PAGE2_200x271)
 
 %.1.png: %.pdf
 	pdftoppm -png -f 1 -l 1 $^ > $@
@@ -26,11 +26,11 @@ all: $(PAGE1_200x217) $(PAGE2_200x217)
 %.2.600x813.png: %.2.png
 	convert -resize 600x813\! $^ $@
 
-%.1.200x217.png: %.1.png
-	convert -resize 200x217\! $^ $@
+%.1.200x271.png: %.1.png
+	convert -resize 200x271\! $^ $@
 
-%.2.200x217.png: %.2.png
-	convert -resize 200x217\! $^ $@
+%.2.200x271.png: %.2.png
+	convert -resize 200x271\! $^ $@
 
 .SECONDARY:
 	# https://stackoverflow.com/a/67780778/89391
@@ -41,6 +41,6 @@ clean:
 	rm -f *.2.png
 	rm -f *.1.600x813.png
 	rm -f *.2.600x813.png
-	rm -f *.1.200x217.png
-	rm -f *.2.200x217.png
+	rm -f *.1.200x271.png
+	rm -f *.2.200x271.png
 	rm -f *.partial_download
