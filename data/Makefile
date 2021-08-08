@@ -14,6 +14,7 @@ all: $(PAGE1) $(PAGE2)
 clean:
 	rm -f *.1.png
 	rm -f *.2.png
+	rm -f *.partial_download
 
 %.1.png: %.pdf
 	pdftoppm -png -f 1 -l 1 $^ > $@
