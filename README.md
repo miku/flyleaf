@@ -39,3 +39,8 @@ Using 40 files for validation.
 ```
 
 Validation accuracy as low as 0.5, max 0.875. With augmentation, which we do not really need. Try once again without.
+
+## TODO
+
+* [ ] full automated collection of e.g. 10000 examples per class
+* [ ] explore more architectures; CNN + full connected;
