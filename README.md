@@ -12,6 +12,10 @@ Example proceeding PDFs:
 * [https://www.utupub.fi/bitstream/handle/10024/144335/Proceedings%20Final.pdf](https://www.utupub.fi/bitstream/handle/10024/144335/Proceedings%20Final.pdf)
 * ...
 
+Another, recent find:
+
+* [https://www.issi-society.org/proceedings/issi_2021/Proceedings%20ISSI%202021.pdf](https://www.issi-society.org/proceedings/issi_2021/Proceedings%20ISSI%202021.pdf)
+
 ## Idea
 
 * binary classifier
